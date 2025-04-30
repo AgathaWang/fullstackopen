@@ -1,17 +1,17 @@
 const mongoose = require('mongoose')
+// not required in new structure, which is moved to app.js
+// mongoose.set('strictQuery', false)
 
-mongoose.set('strictQuery', false)
+// const url = process.env.MONGODB_URI
 
-const url = process.env.MONGODB_URI
-
-console.log('connecting to', url)
-mongoose.connect(url)
-  .then(result => {
-    console.log('connected to MongoDB')
-  })
-  .catch(error => {
-    console.log('error connecting to MongoDB:', error.message)
-  })
+// console.log('connecting to', url)
+// mongoose.connect(url)
+//   .then(result => {
+//     console.log('connected to MongoDB')
+//   })
+//   .catch(error => {
+//     console.log('error connecting to MongoDB:', error.message)
+//   })
 
 const noteSchema = new mongoose.Schema({
   content: {
